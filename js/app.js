@@ -117,7 +117,7 @@ for(var i = 0; i < 4; i++)
 
 
 //DOM Api
-var ppp = document.querySelector(".jumbotron")
+var ppp = document.querySelector(".jumbotron"); //jego jeszcze nie ma
 ppp.style.border = "3px solid red"
 
 var divs = document.querySelectorAll ("div")
