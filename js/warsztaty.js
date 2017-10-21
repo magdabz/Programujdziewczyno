@@ -33,5 +33,35 @@ document.addEventListener('DOMContentLoaded', function() {
         })
       }
 
+      //Zadanie 2
+      function showHide () {
+          var textArea = this.previousElementSibling;
+          console.log(textArea);
+          if (textArea.style.display=="none" || textArea.style.display == "") {
+            textArea.style.display = "block";
+            // console.log(this.innerHTML);
+            this.innerHTML = 'MNIEJ <span class="glyphicon glyphicon-chevron-up"></span>';
+        } else {
+            textArea.style.display = "none";
+            this.innerHTML = 'WIĘCEJ <span class="glyphicon glyphicon-chevron-up"></span>';
+        }
+    }
 
-    });
+      var buttons = document.querySelectorAll('.read-more');
+      // console.log(buttons);
+
+      // console.log(buttons[0].previousElementSibling); // Powinnaś zobaczyć w konsoli paragraf o klasie `more`
+
+      // buttons[0].addEventListener("click", showHide )
+
+      for(var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", showHide )
+    }
+
+
+
+
+
+
+
+});
